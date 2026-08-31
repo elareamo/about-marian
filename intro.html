@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hi, I'm Marian</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia, serif;
+}
+
+body{
+background:#F8F3ED;
+color:#5C4438;
+padding:40px 20px;
+}
+
+.container{
+max-width:850px;
+margin:auto;
+animation:fade 1s;
+}
+
+.title{
+text-align:center;
+margin-bottom:35px;
+}
+
+.title h1{
+font-size:42px;
+margin-bottom:8px;
+}
+
+.title p{
+color:#A08372;
+font-style:italic;
+}
+
+.polaroid{
+background:white;
+padding:15px 15px 55px;
+width:260px;
+margin:0 auto 40px;
+box-shadow:0 12px 25px rgba(0,0,0,.08);
+transform:rotate(-3deg);
+position:relative;
+}
+
+.polaroid img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.polaroid::before{
+content:"";
+position:absolute;
+top:-10px;
+left:85px;
+width:90px;
+height:20px;
+background:#E8D8C8;
+transform:rotate(-5deg);
+}
+
+.caption{
+text-align:center;
+margin-top:12px;
+font-style:italic;
+color:#8B6A55;
+}
+
+.story{
+background:white;
+padding:28px;
+border-radius:20px;
+line-height:2;
+box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+
+.quote{
+margin-top:25px;
+padding:18px;
+background:#F4ECE4;
+border-left:4px solid #C89F7A;
+font-style:italic;
+border-radius:12px;
+}
+
+.next{
+text-align:right;
+margin-top:35px;
+}
+
+.next a{
+background:#C89F7A;
+color:white;
+padding:14px 28px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">
+<h1>Hi, I'm Marian 🌷</h1>
+<p>A tiny chapter of my story</p>
+</div>
+
+<div class="polaroid">
+<img src="marian.jpg" alt="Marian">
+<div class="caption">Nice to meet you ♡</div>
+</div>
+
+<div class="story">
+
+<p>
+My name is <b>Marian Faith G. Fernandez</b>, and I'm 17 years old. I'm currently studying <b>Bachelor of Science in Geodetic Engineering</b> at FEATI University in Manila.
+</p>
+
+<p>
+Before college, I spent my childhood in the beautiful city of <b>Baguio</b>, where I studied from preschool until Grade 12. Growing up surrounded by cool weather, pine trees, and familiar streets gave me memories I'll always treasure.
+</p>
+
+<p>
+I've always loved trying new things. From swimming during my childhood to exploring sports like football, futsal, volleyball, and even archery, I've enjoyed discovering what makes me feel alive. On quieter days, you'll probably find me playing Mobile Legends or Call of Duty with friends.
+</p>
+
+<p>
+If you asked me to describe myself, I'd probably smile and say, “I don't really know.” So I asked my friends instead. They described me as <b>adorable, sweet, generous, funny, compassionate, and someone who always tries to make everyone feel included.</b> I hope I'm becoming the person they already believe I am.
+</p>
+
+<div class="quote">
+“Every person has a story. This is only one small chapter of mine.”
+</div>
+
+<div class="next">
+<a href="family.html">Continue →</a>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
