@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Family</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia, serif;
+}
+
+body{
+background:#F8F3ED;
+color:#5C4438;
+padding:40px 20px;
+}
+
+.container{
+max-width:850px;
+margin:auto;
+animation:fade 1s;
+}
+
+h1{
+text-align:center;
+font-size:40px;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+font-style:italic;
+color:#A08372;
+margin-bottom:35px;
+}
+
+.polaroid{
+background:white;
+padding:15px 15px 50px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+width:320px;
+margin:auto;
+position:relative;
+transform:rotate(2deg);
+}
+
+.polaroid img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.polaroid::before{
+content:"";
+position:absolute;
+top:-10px;
+left:110px;
+width:95px;
+height:20px;
+background:#EADBCF;
+transform:rotate(-8deg);
+}
+
+.caption{
+text-align:center;
+margin-top:10px;
+font-style:italic;
+color:#8B6A55;
+}
+
+.story{
+margin-top:35px;
+background:white;
+padding:28px;
+border-radius:18px;
+line-height:2;
+box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+
+.quote{
+margin-top:25px;
+background:#F4ECE4;
+padding:18px;
+border-left:4px solid #C89F7A;
+border-radius:10px;
+font-style:italic;
+}
+
+.popup{
+position:fixed;
+bottom:20px;
+right:20px;
+background:white;
+padding:18px;
+border-radius:18px;
+box-shadow:0 12px 30px rgba(0,0,0,.15);
+display:none;
+max-width:250px;
+animation:slide .5s;
+}
+
+.popup h3{
+margin-bottom:8px;
+font-size:18px;
+}
+
+.popup p{
+font-size:14px;
+color:#6F5C50;
+margin-bottom:12px;
+line-height:1.5;
+}
+
+.popup a{
+display:block;
+text-align:center;
+background:#C89F7A;
+color:white;
+padding:10px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+@keyframes slide{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>The People Who Raised Me 🤍</h1>
+
+<div class="subtitle">
+Home isn't perfect, but it's still home.
+</div>
+
+<div class="polaroid">
+<img src="family.jpg" alt="Family">
+<div class="caption">My favorite people ♡</div>
+</div>
+
+<div class="story">
+
+<p>
+One thing you'll probably notice about my family is our faces. We've always been misunderstood because of our resting facial expressions. People often think we're angry or in a bad mood, when in reality we're simply... existing.
+</p>
+
+<p>
+It's funny how something so small can create so many first impressions. But once people get to know us, they'll realize we're loud, playful, and full of laughter.
+</p>
+
+<p>
+Every birthday, Christmas, and family gathering becomes my favorite memory. A table full of food, everyone talking at once, endless teasing, and laughter that somehow gets louder every year—those moments remind me what home truly feels like.
+</p>
+
+<div class="quote">
+“Love isn't always loud. Sometimes it's simply showing up for each other.”
+</div>
+
+</div>
+
+</div>
+
+<div class="popup" id="popup">
+<h3>Want to continue? 🌷</h3>
+<p>The next chapter is waiting for you.</p>
+<a href="dream.html">Continue →</a>
+</div>
+
+<script>
+setTimeout(function(){
+document.getElementById("popup").style.display="block";
+},30000);
+</script>
+
+</body>
+</html>
