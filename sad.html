@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Why not me?</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia, serif;
+}
+
+body{
+background:#F8F3ED;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+padding:20px;
+overflow:hidden;
+}
+
+.card{
+background:#FFFDFB;
+max-width:420px;
+padding:25px;
+border-radius:22px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+position:relative;
+animation:fade 1s;
+}
+
+.tape{
+position:absolute;
+width:80px;
+height:18px;
+background:#EADBCF;
+opacity:.8;
+}
+
+.left{
+top:15px;
+left:25px;
+transform:rotate(-12deg);
+}
+
+.right{
+top:15px;
+right:25px;
+transform:rotate(12deg);
+}
+
+.photo{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+h1{
+text-align:center;
+color:#5C4438;
+font-size:28px;
+margin-bottom:15px;
+}
+
+p{
+text-align:center;
+line-height:1.8;
+color:#7B6759;
+margin-bottom:25px;
+}
+
+.btn{
+display:block;
+text-align:center;
+background:#C89F7A;
+color:white;
+padding:14px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.03);
+}
+
+.small{
+text-align:center;
+margin-top:18px;
+font-size:13px;
+color:#B89A84;
+font-style:italic;
+}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="tape left"></div>
+<div class="tape right"></div>
+
+<img src="sad.jpg" class="photo" alt="Marian">
+
+<h1>Why don't you want to know me? 🥺</h1>
+
+<p>
+Maybe I don't seem interesting yet… but if you'll give me one little chance, I'd love to tell you a tiny story about myself.
+</p>
+
+<a href="intro.html" class="btn">Okay… I'll read it ♡</a>
+
+<div class="small">
+Maybe first impressions aren't everything.
+</div>
+
+</div>
+
+</body>
+</html>
