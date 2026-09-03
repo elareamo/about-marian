@@ -23,7 +23,18 @@ padding:40px 20px;
 max-width:900px;
 margin:auto;
 animation:fade 1s;
+position:relative;
 }
+
+.corner{
+position:absolute;
+font-size:26px;
+opacity:.35;
+}
+
+.a{top:5px;right:10px;}
+.b{top:60px;left:0;}
+.c{bottom:70px;right:15px;}
 
 h1{
 text-align:center;
@@ -102,51 +113,23 @@ border-radius:10px;
 font-style:italic;
 }
 
-.popup{
-position:fixed;
-bottom:20px;
-right:20px;
-background:white;
-padding:18px;
-border-radius:18px;
-box-shadow:0 12px 30px rgba(0,0,0,.15);
-display:none;
-max-width:250px;
-animation:slide .5s;
+.next{
+text-align:right;
+margin-top:30px;
 }
 
-.popup h3{
-margin-bottom:8px;
-font-size:18px;
-}
-
-.popup p{
-font-size:14px;
-color:#6F5C50;
-margin-bottom:12px;
-line-height:1.5;
-}
-
-.popup a{
-display:block;
-text-align:center;
+.next a{
 background:#C89F7A;
 color:white;
-padding:10px;
-border-radius:30px;
+padding:13px 26px;
+border-radius:40px;
 text-decoration:none;
 font-weight:bold;
+transition:.3s;
 }
 
-@keyframes slide{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+.next a:hover{
+background:#B88963;
 }
 
 @keyframes fade{
@@ -159,36 +142,21 @@ opacity:1;
 transform:translateY(0);
 }
 }
-.side-next{
-position:fixed;
-right:25px;
-top:50%;
-transform:translateY(-50%);
-background:#C89F7A;
-color:white;
-text-decoration:none;
-padding:14px 18px;
-border-radius:30px;
-font-weight:bold;
-box-shadow:0 10px 20px rgba(0,0,0,.15);
-transition:.3s;
-}
-
-.side-next:hover{
-transform:translateY(-50%) scale(1.05);
-background:#B88963;
-}
 </style>
-
 </head>
+
 <body>
 
 <div class="container">
 
+<div class="corner a">✈️</div>
+<div class="corner b">☁️</div>
+<div class="corner c">🌸</div>
+
 <h1>The Future I'm Chasing ✈️</h1>
 
 <div class="subtitle">
-Sometimes dreams don't disappear they simply change direction.
+Sometimes dreams don't disappear. They simply change direction.
 </div>
 
 <div class="photos">
@@ -201,8 +169,8 @@ Sometimes dreams don't disappear they simply change direction.
 
 <div class="polaroid">
 <div class="tape"></div>
-<img src="feati.jpg" alt="FEATI">
-<div class="caption">The path I'm taking</div>
+<img src="feati.jpg" alt="Geodetic Engineering">
+<div class="caption">The future I'm building</div>
 </div>
 
 </div>
@@ -218,20 +186,24 @@ As I grew older, I began pursuing that dream and even reached the CAAP process. 
 </p>
 
 <p>
-If I'm honest, there were moments when I questioned my decision and wondered if I had taken the wrong path. Choosing FEATI wasn't the future I originally imagined, but it became the place where I met incredible friends and discovered a different version of myself.
+There were moments when I questioned my decisions and wondered if I had taken the wrong path. Choosing FEATI was not the future I originally imagined, but it became the place where I met incredible friends and discovered a different version of myself.
 </p>
 
 <p>
-I don't know exactly where life will take me yet, but I do know this: I'll keep chasing a future that makes my younger self proud.
+I don't know exactly where life will take me yet, but I do know this. I'll keep chasing a future that makes my younger self proud.
 </p>
 
 <div class="quote">
 “Not every journey follows the map we planned, and that's okay.”
 </div>
 
+<div class="next">
+<a href="thankyou.html">Continue →</a>
 </div>
 
 </div>
-<a href="thankyou.html" class="side-next">Continue →</a>
+
+</div>
+
 </body>
 </html>
