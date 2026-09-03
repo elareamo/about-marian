@@ -159,6 +159,25 @@ opacity:1;
 transform:translateY(0);
 }
 }
+.side-next{
+position:fixed;
+right:25px;
+top:50%;
+transform:translateY(-50%);
+background:#C89F7A;
+color:white;
+text-decoration:none;
+padding:14px 18px;
+border-radius:30px;
+font-weight:bold;
+box-shadow:0 10px 20px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.side-next:hover{
+transform:translateY(-50%) scale(1.05);
+background:#B88963;
+}
 </style>
 
 </head>
@@ -213,18 +232,6 @@ I don't know exactly where life will take me yet, but I do know this: I'll keep 
 </div>
 
 </div>
-
-<div class="popup" id="popup">
-<h3>One last page… 🌸</h3>
-<p>Thank you for staying with my story.</p>
-<a href="thankyou.html">Continue →</a>
-</div>
-
-<script>
-setTimeout(function(){
-document.getElementById("popup").style.display="block";
-},30000);
-</script>
-
+<a href="thankyou.html" class="side-next">Continue →</a>
 </body>
 </html>
