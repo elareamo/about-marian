@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Family</title>
+<title>The People Who Raised Me</title>
 
 <style>
 *{
@@ -17,29 +17,44 @@ body{
 background:#F8F3ED;
 color:#5C4438;
 padding:40px 20px;
+overflow-x:hidden;
+}
+
+/* Floating decorations */
+
+.float{
+position:fixed;
+font-size:22px;
+opacity:.22;
+pointer-events:none;
+animation:fall linear infinite;
+z-index:0;
+}
+
+.a{left:5%;animation:fall 15s linear infinite;}
+.b{left:20%;animation:fall 18s linear infinite 3s;}
+.c{left:42%;animation:fall 17s linear infinite 7s;}
+.d{right:28%;animation:fall 16s linear infinite 2s;}
+.e{right:12%;animation:fall 19s linear infinite 6s;}
+.f{right:40%;animation:fall 18s linear infinite 10s;}
+
+@keyframes fall{
+0%{transform:translateY(-120px) rotate(0deg);}
+100%{transform:translateY(120vh) rotate(360deg);}
 }
 
 .container{
-max-width:850px;
+max-width:980px;
 margin:auto;
-animation:fade 1s;
 position:relative;
+z-index:2;
+animation:fade 1s;
 }
-
-.corner{
-position:absolute;
-font-size:26px;
-opacity:.35;
-}
-
-.c1{top:-10px;left:5px;}
-.c2{top:40px;right:15px;}
-.c3{bottom:80px;left:-5px;}
 
 h1{
 text-align:center;
-font-size:40px;
-margin-bottom:10px;
+font-size:42px;
+margin-bottom:8px;
 }
 
 .subtitle{
@@ -49,56 +64,89 @@ color:#A08372;
 margin-bottom:35px;
 }
 
+/* Scrapbook Gallery */
+
+.gallery{
+display:grid;
+grid-template-columns:1fr 1.5fr 1fr;
+gap:20px;
+align-items:center;
+margin-bottom:40px;
+}
+
+.side{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
 .polaroid{
 background:white;
-padding:15px 15px 50px;
+padding:10px 10px 35px;
 box-shadow:0 10px 25px rgba(0,0,0,.08);
-width:320px;
-margin:auto;
 position:relative;
-transform:rotate(2deg);
 }
 
 .polaroid img{
 width:100%;
-height:260px;
+height:170px;
 object-fit:cover;
 }
 
 .polaroid::before{
 content:"";
 position:absolute;
-top:-10px;
-left:110px;
-width:95px;
-height:20px;
+top:-8px;
+left:50%;
+transform:translateX(-50%) rotate(-5deg);
+width:70px;
+height:16px;
 background:#EADBCF;
-transform:rotate(-8deg);
+}
+
+.big img{
+height:360px;
 }
 
 .caption{
 text-align:center;
-margin-top:10px;
+margin-top:8px;
 font-style:italic;
-color:#8B6A55;
+font-size:15px;
+color:#7A6658;
 }
 
-.story{
-margin-top:35px;
-background:white;
-padding:28px;
+/* Story */
+
+.paper{
+background:#FFFDFB;
+padding:32px;
 border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.05);
 line-height:2;
-box-shadow:0 8px 20px rgba(0,0,0,.05);
+position:relative;
+}
+
+.paper:before{
+content:"";
+position:absolute;
+right:0;
+bottom:0;
+width:90px;
+height:90px;
+background:#F2E6D8;
+clip-path:polygon(100% 0,0 100%,100% 100%);
+opacity:.45;
 }
 
 .quote{
 margin-top:25px;
-background:#F4ECE4;
+background:#F5E9DC;
 padding:18px;
-border-left:4px solid #C89F7A;
-border-radius:10px;
+border-radius:12px;
+border-left:5px solid #C89F7A;
 font-style:italic;
+text-align:center;
 }
 
 .next{
@@ -109,8 +157,8 @@ margin-top:30px;
 .next a{
 background:#C89F7A;
 color:white;
-padding:13px 26px;
-border-radius:40px;
+padding:14px 28px;
+border-radius:35px;
 text-decoration:none;
 font-weight:bold;
 transition:.3s;
@@ -130,29 +178,79 @@ opacity:1;
 transform:translateY(0);
 }
 }
+
+@media(max-width:800px){
+.gallery{
+grid-template-columns:1fr;
+}
+.side{
+flex-direction:row;
+overflow:auto;
+}
+.big img{
+height:280px;
+}
+}
 </style>
 </head>
 
 <body>
 
+<!-- Floating Background -->
+
+<div class="float a">🌸</div>
+<div class="float b">🤍</div>
+<div class="float c">💗</div>
+<div class="float d">🌷</div>
+<div class="float e">🌸</div>
+<div class="float f">♡</div>
+
 <div class="container">
 
-<div class="corner c1">🌸</div>
-<div class="corner c2">🤍</div>
-<div class="corner c3">🌷</div>
-
-<h1>The People Who Raised Me 🤍</h1>
+<h1>The People Who Raised Me ♡</h1>
 
 <div class="subtitle">
 Home isn't perfect, but it's still home.
 </div>
 
+<div class="gallery">
+
+<div class="side">
+
 <div class="polaroid">
-<img src="family.jpg" alt="Family">
+<img src="family1.jpg">
+<div class="caption">Silly moments ♡</div>
+</div>
+
+<div class="polaroid">
+<img src="family2.jpg">
+<div class="caption">Good food, good people</div>
+</div>
+
+</div>
+
+<div class="polaroid big">
+<img src="family.jpg">
 <div class="caption">My favorite people ♡</div>
 </div>
 
-<div class="story">
+<div class="side">
+
+<div class="polaroid">
+<img src="family3.jpg">
+<div class="caption">All the laughter ♡</div>
+</div>
+
+<div class="polaroid">
+<img src="family4.jpg">
+<div class="caption">Always us ♡</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="paper">
 
 <p>
 One thing you'll probably notice about my family is our faces. We've always been misunderstood because of our resting facial expressions. People often think we're angry or in a bad mood, when in reality we're simply existing.
