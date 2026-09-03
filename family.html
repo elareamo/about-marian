@@ -147,6 +147,25 @@ opacity:1;
 transform:translateY(0);
 }
 }
+.side-next{
+position:fixed;
+right:25px;
+top:50%;
+transform:translateY(-50%);
+background:#C89F7A;
+color:white;
+text-decoration:none;
+padding:14px 18px;
+border-radius:30px;
+font-weight:bold;
+box-shadow:0 10px 20px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.side-next:hover{
+transform:translateY(-50%) scale(1.05);
+background:#B88963;
+}
 </style>
 </head>
 
@@ -187,17 +206,7 @@ Every birthday, Christmas, and family gathering becomes my favorite memory. A ta
 
 </div>
 
-<div class="popup" id="popup">
-<h3>Want to continue? 🌷</h3>
-<p>The next chapter is waiting for you.</p>
-<a href="dream.html">Continue →</a>
-</div>
-
-<script>
-setTimeout(function(){
-document.getElementById("popup").style.display="block";
-},30000);
-</script>
+<a href="dream.html" class="side-next">Continue →</a>
 
 </body>
 </html>
